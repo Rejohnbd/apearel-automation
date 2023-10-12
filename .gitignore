@@ -1,0 +1,16 @@
+/apparel-front/.phpunit.cache
+/apparel-front/node_modules
+/apparel-front/public/build
+/apparel-front/public/hot
+/apparel-front/public/storage
+/apparel-front/storage/*.key
+/apparel-front/vendor
+/apparel-front/.phpunit.result.cache
+/apparel-front/Homestead.json
+/apparel-front/Homestead.yaml
+/apparel-front/auth.json
+/apparel-front/npm-debug.log
+/apparel-front/yarn-error.log
+/apparel-front/.fleet
+/apparel-front/.idea
+/apparel-front/.vscode
