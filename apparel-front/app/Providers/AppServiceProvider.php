@@ -3,8 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use PhpMqtt\Client\Facades\MQTT;
-use Illuminate\Support\Facades\Log;
+// use PhpMqtt\Client\Facades\MQTT;
+// use Illuminate\Support\Facades\Log;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,14 +22,13 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
-        Log::info('ok');
-        // MQTT
-        $mqtt = MQTT::connection();
-        $mqtt->subscribe('#', function (string $topic, string $message) {
-            Log::info('topic :', $message);
-            Log::info('message :', $topic);
-        }, 1);
-        // Log::info('mqtt', $mqtt);
+
+        // Log::info('ok');
+        // $mqtt = MQTT::connection();
+        // $mqtt->subscribe('#', function (string $topic, string $message) {
+        //     Log::info('topic :', $message);
+        //     Log::info('message :', $topic);
+        // }, 1);
         // $mqtt->loop(true);
     }
 }

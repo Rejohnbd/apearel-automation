@@ -36,6 +36,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/first-flood', [ScreenController::class, 'first_floor'])->name('first-floor');
+Route::get('/first-floor', [ScreenController::class, 'first_floor'])->name('first-floor');
 
 require __DIR__ . '/auth.php';
