@@ -23,7 +23,80 @@ import { Head, Link } from '@inertiajs/vue3';
 <template>
     <Head title="Welcome" />
     <ScreenLayoutLayout>
-        <h1>hhhhhh</h1>
+        <table class="w-full table-auto border-collapse border border-slate-400">
+            <thead>
+                <tr>
+                    <th class="border border-slate-300">Line</th>
+                    <th class="border border-slate-300">Sewing Machine</th>
+                    <th class="border border-slate-300">Item</th>
+                    <th class="border border-slate-300">8:00 - 9:00</th>
+                    <th class="border border-slate-300">9:00 - 10:00</th>
+                    <th class="border border-slate-300">10:00 - 11:00</th>
+                    <th class="border border-slate-300">11:00 - 12:00</th>
+                    <th class="border border-slate-300">12:00 - 13:00</th>
+                    <th class="border border-slate-300">13:00 - 14:00</th>
+                    <th class="border border-slate-300">14:00 - 15:00</th>
+                    <th class="border border-slate-300">15:00 - 16:00</th>
+                    <th class="border border-slate-300">16:00 - 17:00</th>
+                    <th class="border border-slate-300">17:00 - 18:00</th>
+                    <th class="border border-slate-300">Total</th>
+                    <th class="border border-slate-300">Achievement</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border border-slate-300">Line 01</td>
+                    <td class="border border-slate-300">Collar Sewing</td>
+                    <td class="border border-slate-300">Koclar</td>
+                    <td class="border border-slate-300">10</td>
+                    <td class="border border-slate-300">15</td>
+                    <td class="border border-slate-300">14</td>
+                    <td class="border border-slate-300">20</td>
+                    <td class="border border-slate-300">18</td>
+                    <td class="border border-slate-300">10</td>
+                    <td class="border border-slate-300">17</td>
+                    <td class="border border-slate-300">14</td>
+                    <td class="border border-slate-300">18</td>
+                    <td class="border border-slate-300">14</td>
+                    <td class="border border-slate-300">130</td>
+                    <td class="border border-slate-300">12%</td>
+                </tr>
+                <tr>
+                    <td class="border border-slate-300">Line 02</td>
+                    <td class="border border-slate-300">Button Sewing</td>
+                    <td class="border border-slate-300">Button</td>
+                    <td class="border border-slate-300">10</td>
+                    <td class="border border-slate-300">15</td>
+                    <td class="border border-slate-300">14</td>
+                    <td class="border border-slate-300">20</td>
+                    <td class="border border-slate-300">18</td>
+                    <td class="border border-slate-300">10</td>
+                    <td class="border border-slate-300">17</td>
+                    <td class="border border-slate-300">14</td>
+                    <td class="border border-slate-300">18</td>
+                    <td class="border border-slate-300">14</td>
+                    <td class="border border-slate-300">130</td>
+                    <td class="border border-slate-300">12%</td>
+                </tr>
+                <tr>
+                    <td class="border border-slate-300">Line 03</td>
+                    <td class="border border-slate-300">Chest Sewing</td>
+                    <td class="border border-slate-300">Chest</td>
+                    <td class="border border-slate-300">10</td>
+                    <td class="border border-slate-300">15</td>
+                    <td class="border border-slate-300">14</td>
+                    <td class="border border-slate-300">20</td>
+                    <td class="border border-slate-300">18</td>
+                    <td class="border border-slate-300">10</td>
+                    <td class="border border-slate-300">17</td>
+                    <td class="border border-slate-300">14</td>
+                    <td class="border border-slate-300">18</td>
+                    <td class="border border-slate-300">14</td>
+                    <td class="border border-slate-300">130</td>
+                    <td class="border border-slate-300">12%</td>
+                </tr>
+            </tbody>
+        </table>
     </ScreenLayoutLayout>
 </template>
 

@@ -12,13 +12,13 @@ class ScreenController extends Controller
 {
     public function first_floor(): Response
     {
-        $data = array(
-            'deviceId' => 'juki-abcd',
-            'employeeId' => 15,
-            'quantity' => 200,
-            'type' => 'shoulder'
-        );
-        MQTT::publish('first-floor', json_encode($data));
+        // $data = array(
+        //     'deviceId' => 'juki-abcd',
+        //     'employeeId' => 15,
+        //     'quantity' => 200,
+        //     'type' => 'shoulder'
+        // );
+        // MQTT::publish('first-floor', json_encode($data));
         return Inertia::render('Screen');
     }
 }
