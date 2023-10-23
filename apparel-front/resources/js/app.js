@@ -25,7 +25,3 @@ createInertiaApp({
         color: "#4B5563",
     },
 });
-
-Echo.channel("first-floor").listen("RealTimeMessage", (e) =>
-    console.log("RealTimeMessage: " + e.message)
-);

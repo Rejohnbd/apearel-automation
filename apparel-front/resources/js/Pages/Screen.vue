@@ -19,6 +19,11 @@ import { Head, Link } from '@inertiajs/vue3';
 //     },
 // });
 </script>
+<script>
+Echo.channel("first-floor").listen("RealTimeMessage", (e) =>
+    console.log("RealTimeMessage: " + e.message)
+);
+</script>
 
 <template>
     <Head title="Welcome" />
