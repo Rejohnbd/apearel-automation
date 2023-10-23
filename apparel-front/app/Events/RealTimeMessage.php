@@ -38,6 +38,7 @@ class RealTimeMessage implements ShouldBroadcastNow
         // return [
         //     // new PrivateChannel('channel-name'),
         // ];
-        return new Channel('events');
+        // return new Channel('events');
+        return new Channel('first-floor');
     }
 }

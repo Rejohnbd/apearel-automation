@@ -26,6 +26,6 @@ createInertiaApp({
     },
 });
 
-Echo.channel("events").listen("RealTimeMessage", (e) =>
-    console.log("RealTimeMessage: " + message)
+Echo.channel("first-floor").listen("RealTimeMessage", (e) =>
+    console.log("RealTimeMessage: " + e.message)
 );
