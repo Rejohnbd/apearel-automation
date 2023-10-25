@@ -2,22 +2,10 @@
 import ScreenLayoutLayout from '@/Layouts/ScreenLayout.vue';
 import { Head, Link } from '@inertiajs/vue3';
 
-// defineProps({
-//     canLogin: {
-//         type: Boolean,
-//     },
-//     canRegister: {
-//         type: Boolean,
-//     },
-//     laravelVersion: {
-//         type: String,
-//         required: true,
-//     },
-//     phpVersion: {
-//         type: String,
-//         required: true,
-//     },
-// });
+defineProps({
+    data: Object
+})
+
 </script>
 <script>
 Echo.channel("first-floor").listen("RealTimeMessage", (e) =>
@@ -29,6 +17,20 @@ Echo.channel("first-floor").listen("RealTimeMessage", (e) =>
     <Head title="Welcome" />
     <ScreenLayoutLayout>
         <table class="w-full table-auto border-collapse border border-slate-400">
+            <thead>
+                <tr>
+                    <th class="border border-slate-300">Machine Name</th>
+                    <th class="border border-slate-300">Total Item</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in data">
+                    <td class="border border-slate-300 text-center">{{ item.machine_type.machine_type_name }}</td>
+                    <td class="border border-slate-300 text-center">{{ item.item_number }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <table class="w-full table-auto border-collapse border border-slate-400">
             <thead>
                 <tr>
                     <th class="border border-slate-300">Line</th>
@@ -101,7 +103,7 @@ Echo.channel("first-floor").listen("RealTimeMessage", (e) =>
                     <td class="border border-slate-300">12%</td>
                 </tr>
             </tbody>
-        </table>
+        </table> -->
     </ScreenLayoutLayout>
 </template>
 
