@@ -17,11 +17,12 @@ def on_message(client, userdata, msg):
     print(msg)
     # deviceId = payload['deviceId']
     # print(deviceId)
+    # Need to validate API Secret Key
     url = "http://127.0.0.1:8000/api/test-api"
     data = {
         'deviceId': payload['deviceId'],
         'quantity': payload['quantity'],
-        'type': payload['type']
+        # 'type': payload['type']
     }
 
     response = requests.post(url, json=data)

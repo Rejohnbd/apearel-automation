@@ -45,7 +45,7 @@ class ScreenController extends Controller
             ->get();
         // dd($data);
         return Inertia::render('Screen', [
-            'data' => $data
+            'reportData' => $data
         ]);
     }
 }

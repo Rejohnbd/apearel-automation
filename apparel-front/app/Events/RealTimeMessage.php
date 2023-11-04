@@ -16,14 +16,13 @@ class RealTimeMessage implements ShouldBroadcastNow
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public string $message;
+    public object $message;
 
     /**
      * Create a new event instance.
      */
-    public function __construct(string $message)
+    public function __construct(object $message)
     {
-        Log::info("in construct");
         $this->message = $message;
     }
 
@@ -34,7 +33,6 @@ class RealTimeMessage implements ShouldBroadcastNow
      */
     public function broadcastOn()
     {
-        Log::info("in broadcastOn");
         // return [
         //     // new PrivateChannel('channel-name'),
         // ];

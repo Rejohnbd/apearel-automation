@@ -1,17 +1,61 @@
-<script setup>
+<script>
 import ScreenLayoutLayout from '@/Layouts/ScreenLayout.vue';
 import { Head, Link } from '@inertiajs/vue3';
 
-defineProps({
-    data: Object
-})
+// let props = defineProps({
+//     data: Object
+// })
+
+
+export default {
+    name: 'DailyReport',
+    components: {
+        ScreenLayoutLayout,
+        Head,
+        Link
+    },
+    props: {
+        reportData: {
+            type: Object
+        }
+    },
+    created(){
+        this.report = this.$props.reportData
+    },
+    mounted(){
+        Echo.channel("first-floor").listen("RealTimeMessage", (e) => {
+            // console.log(typeof (e.message))
+            this.report = e.message
+            // console.log("RealTimeMessage: " + e.message)
+        });
+    },
+    data(){
+        return {
+            report: []
+        }
+    },
+}
 
 </script>
-<script>
-Echo.channel("first-floor").listen("RealTimeMessage", (e) =>
+<!-- <script setup>
+import ScreenLayoutLayout from '@/Layouts/ScreenLayout.vue';
+import { Head, Link } from '@inertiajs/vue3';
+
+const propsData = defineProps({
+    reportData: Object
+})
+
+
+let report = propsData.reportData;
+
+Echo.channel("first-floor").listen("RealTimeMessage", (e) =>{
+    report = e.message
     console.log("RealTimeMessage: " + e.message)
-);
-</script>
+});
+
+console.log(report);
+
+</script> -->
 
 <template>
     <Head title="Welcome" />
@@ -24,7 +68,7 @@ Echo.channel("first-floor").listen("RealTimeMessage", (e) =>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in data">
+                <tr v-for="item in report">
                     <td class="border border-slate-300 text-center">{{ item.machine_type.machine_type_name }}</td>
                     <td class="border border-slate-300 text-center">{{ item.item_number }}</td>
                 </tr>
